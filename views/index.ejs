@@ -4,22 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mini Messageboard</title>
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <h1>Messageboard</h1>
-    <form action="/new" method="get">
-      <button type="submit">Add new message</button>
-    </form>
+    <div class="top">
+      <h1>Messageboard</h1>
+      <form action="/new" method="get">
+        <button id="add-message" type="submit">Add new message</button>
+      </form>
+    </div>
     <ol>
       <% messages.forEach((message, index) => { %>
-      <li>
-        Message: <%= message.text %><br />
-        Sent by: <%= message.user %><br />
-        Time: <%= message.added %><br />
-      </li>
-      <form action="/message/<%= index %>" method="get" style="display: inline">
-        <button type="submit">View</button>
-      </form>
+      <div class="message-and-button">
+        <li>
+          Message: <%= message.text %><br />
+          Sent by: <%= message.user %><br />
+          Time: <%= message.added %><br />
+        </li>
+        <form
+          action="/message/<%= index %>"
+          method="get"
+          style="display: inline"
+        >
+          <button type="submit">View</button>
+        </form>
+      </div>
       <% }) %>
     </ol>
   </body>
