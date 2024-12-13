@@ -4,65 +4,42 @@ body {
     font-family: Roboto, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
     height: 100vh;
-}
-
-.top {
-    display: flex;
-    gap: 30px;
-    margin: 30px 50px;
 }
 
 h1 {
     color: #333;
+    /* text-align: center; */
 }
 
-.message-and-button {
-    display: flex;
-    margin-bottom: 20px;
-}
-
-form {
+.container {
+    background: #fff;
     padding: 20px;
     border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
+    text-align: center;
 }
 
-label {
-    display: block;
-    margin-bottom: 10px;
+p {
     color: #555;
-}
-
-input[type="text"] {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    margin: 10px 0;
 }
 
 button {
-    width: fit-content;
-    padding: 10px;
+    padding: 10px 20px;
     font-size: 16px;
     color: white;
     background-color: #007bff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 button:hover {
     background-color: #0056b3;
-}
-
-li {
-    margin-bottom: 10px;
 }

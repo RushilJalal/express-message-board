@@ -17,9 +17,9 @@
       <% messages.forEach((message, index) => { %>
       <div class="message-and-button">
         <li>
-          Message: <%= message.text %><br />
-          Sent by: <%= message.user %><br />
-          Time: <%= message.added %><br />
+          <strong>Message:</strong> <%= message.text %><br />
+          <strong>Sent by:</strong> <%= message.user %><br />
+          <strong>Time:</strong> <%= message.added %><br />
         </li>
         <form
           action="/message/<%= index %>"
