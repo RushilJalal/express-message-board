@@ -15,8 +15,11 @@
       <li>
         Message: <%= message.text %><br />
         Sent by: <%= message.user %><br />
-        Date: <%= message.added %><br />
+        Time: <%= message.added %><br />
       </li>
+      <form action="/message/<%= index %>" method="get" style="display: inline">
+        <button type="submit">View</button>
+      </form>
       <% }) %>
     </ol>
   </body>

@@ -21,4 +21,11 @@ indexRouter.get("/", (req, res) => {
 }
 )
 
+//route for /message/:id
+indexRouter.get("/message/:id", (req, res) => {
+    const message = messages[req.params.id]
+    res.render("message", { message: message })
+}
+)
+
 module.exports = { indexRouter, messages }
