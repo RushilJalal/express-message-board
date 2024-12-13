@@ -7,8 +7,11 @@
   </head>
   <body>
     <h1>Messageboard</h1>
+    <form action="/new" method="get">
+      <button type="submit">Add new message</button>
+    </form>
     <ol>
-      <% messages.forEach(message => { %>
+      <% messages.forEach((message, index) => { %>
       <li>
         Message: <%= message.text %><br />
         Sent by: <%= message.user %><br />

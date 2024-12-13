@@ -21,4 +21,4 @@ indexRouter.get("/", (req, res) => {
 }
 )
 
-module.exports = indexRouter
+module.exports = { indexRouter, messages }
