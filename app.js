@@ -21,3 +21,6 @@ app.use(express.static(assetsPath))
 
 
 app.listen(3000)
+
+//export app for vercel
+module.exports = app
