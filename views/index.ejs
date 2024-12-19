@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mini Messageboard</title>
-    <link rel="stylesheet" href="index.css" />
-  </head>
-  <body>
-    <div class="top">
-      <h1>Messageboard</h1>
-      <form action="/new" method="get">
-        <button id="add-message" type="submit">Add new message</button>
-      </form>
-    </div>
-    <ol>
-      <% messages.forEach((message, index) => { %>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Messageboard</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <div class="top">
+    <h1>Messageboard</h1>
+    <form action="/new" method="get">
+      <button id="add-message" type="submit">Add new message</button>
+    </form>
+  </div>
+  <ol>
+    <% messages.forEach((message, index+1)=> { %>
       <div class="message-and-button">
         <li>
-          <strong>Message:</strong> <%= message.text %><br />
-          <strong>Sent by:</strong> <%= message.user %><br />
-          <strong>Time:</strong> <%= message.added %><br />
+          <strong>Message:</strong>
+          <%= message.text %><br />
+            <strong>Sent by:</strong>
+            <%= message.user %><br />
+              <strong>Time:</strong>
+              <%= message.added %><br />
         </li>
-        <form
-          action="/message/<%= index %>"
-          method="get"
-          style="display: inline"
-        >
+        <form action="/message/<%= index %>" method="get" style="display: inline">
           <button type="submit">View</button>
         </form>
       </div>
       <% }) %>
-    </ol>
-  </body>
+  </ol>
+</body>
+
 </html>

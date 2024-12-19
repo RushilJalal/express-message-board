@@ -11,7 +11,7 @@ newMessageRouter.get("/", (req, res) => {
 newMessageRouter.post("/", async (req, res) => {
     const { name, message } = req.body
     try {
-        await pool.query('insert into messages (text,"user",added) values ($1,$2,$3)', [message, name, new Date().toISOString()])
+        await pool.query('insert into messages (text,"user",added) values ($1,$2,$3)', [message, name, new Date()])
         res.redirect("/")
     } catch (error) {
         console.error(error)
