@@ -1,30 +1,30 @@
 const { Router } = require('express')
-
 const indexRouter = Router()
+const pool = require("../db/config")
 
-const messages = [
-    {
-        text: "Hi there!",
-        user: "Amando",
-        added: new Date()
-    },
-    {
-        text: "Hello World!",
-        user: "Charles",
-        added: new Date()
+//render index.ejs view by querying from postgres db
+indexRouter.get("/", async (req, res) => {
+    try {
+        const result = await pool.query("select * from messages")
+        const messages = result.rows
+        res.render("index", { messages: messages })
+    } catch (error) {
+        console.error(error)
+        res.send("Error: " + error)
     }
-];
-
-//render index.ejs view
-indexRouter.get("/", (req, res) => {
-    res.render("index", { messages: messages })
 }
 )
 
-//route for /message/:id
-indexRouter.get("/message/:id", (req, res) => {
-    const message = messages[req.params.id]
-    res.render("message", { message: message })
+//route to show a specific message
+indexRouter.get("/message/:id", async (req, res) => {
+    try {
+        const result = await pool.query("select * from messages where id = $1", [req.params.id])
+        const message = result.rows[0]
+        res.render("message", { message: message })
+    } catch (error) {
+        console.error(error)
+        res.send("Error: " + error)
+    }
 }
 )
 
