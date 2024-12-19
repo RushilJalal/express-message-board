@@ -16,7 +16,7 @@
     </form>
   </div>
   <ol>
-    <% messages.forEach((message, index+1)=> { %>
+    <% messages.forEach((message, index)=> { %>
       <div class="message-and-button">
         <li>
           <strong>Message:</strong>
@@ -26,7 +26,7 @@
               <strong>Time:</strong>
               <%= message.added %><br />
         </li>
-        <form action="/message/<%= index %>" method="get" style="display: inline">
+        <form action="/message/<%= index+1 %>" method="get" style="display: inline">
           <button type="submit">View</button>
         </form>
       </div>
