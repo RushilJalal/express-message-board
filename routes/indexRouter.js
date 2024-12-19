@@ -28,4 +28,4 @@ indexRouter.get("/message/:id", async (req, res) => {
 }
 )
 
-module.exports = { indexRouter, messages }
+module.exports = { indexRouter }
