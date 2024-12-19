@@ -15,7 +15,7 @@ newMessageRouter.post("/", async (req, res) => {
         res.redirect("/")
     } catch (error) {
         console.error(error)
-        res.send("Error: " + error)
+        res.send(error)
     }
 }
 )

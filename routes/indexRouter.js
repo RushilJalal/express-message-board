@@ -10,7 +10,7 @@ indexRouter.get("/", async (req, res) => {
         res.render("index", { messages: messages })
     } catch (error) {
         console.error(error)
-        res.send("Error: " + error)
+        res.send(error)
     }
 }
 )
@@ -23,7 +23,7 @@ indexRouter.get("/message/:id", async (req, res) => {
         res.render("message", { message: message })
     } catch (error) {
         console.error(error)
-        res.send("Error: " + error)
+        res.send(error)
     }
 }
 )
