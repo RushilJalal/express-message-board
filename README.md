@@ -2,6 +2,9 @@
 
 ### This is a simple message board application built with Express.js, EJS, and PostgreSQL. Users can add messages and view them on the message board.
 
+## Deployment Link
+https://express-message-board.up.railway.app/
+
 ## Installation
 
 1. Clone the repository:
