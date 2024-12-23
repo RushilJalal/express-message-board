@@ -23,7 +23,7 @@ WORKDIR /usr/src/app
 COPY package.json package-lock.json ./
 RUN --mount=type=bind,source=package.json,target=package.json \
     --mount=type=bind,source=package-lock.json,target=package-lock.json \
-    --mount=type=cache,id=npm-cache,target=/root/.npm \
+    --mount=type=cache,id=s/5b5d4ab6-9ef9-4a9c-9d05-459161e4bd48-root/.npm,target=/root/.npm \
     npm ci --omit=dev
 
 # Run the application as a non-root user.
