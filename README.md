@@ -5,6 +5,11 @@
 ## Deployment Link
 https://express-message-board.up.railway.app/
 
+## Prerequisites
+
+1. Docker
+2. Node
+
 ## Installation
 
 1. Clone the repository:
@@ -18,16 +23,11 @@ https://express-message-board.up.railway.app/
     npm install
     ```
 
-3. Create a `.env` file and set up the PostgreSQL database and configure the connection string in the `DATABASE_URL` environment variable.
-
-## Usage
-
-1. Start the application:
+3. Build the containers:
     ```sh
-    node --watch app.js
+    docker compose up --build -d
     ```
-
-2. Open your browser and navigate to `http://localhost:3000`.
+4. Open http://localhost:3000
 
 ## Routes
 

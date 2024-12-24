@@ -21,9 +21,8 @@ WORKDIR /usr/src/app
 # Leverage a bind mounts to package.json and package-lock.json to avoid having to copy them into
 # into this layer.
 COPY package.json package-lock.json ./
-RUN --mount=type=bind,source=package.json,target=package.json \
-    --mount=type=bind,source=package-lock.json,target=package-lock.json \
-    --mount=type=cache,id=s/5b5d4ab6-9ef9-4a9c-9d05-459161e4bd48-root/.npm,target=/root/.npm \
+
+RUN --mount=type=cache,id=s/5b5d4ab6-9ef9-4a9c-9d05-459161e4bd48-root/.npm,target=/root/.npm \
     npm ci --omit=dev
 
 # Run the application as a non-root user.
