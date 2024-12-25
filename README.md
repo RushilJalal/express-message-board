@@ -1,14 +1,14 @@
 # Express Message Board
 
-### This is a simple message board application built with Express.js, EJS, and PostgreSQL. Users can add messages and view them on the message board.
+### This is a simple message board application built with Express.js using a PostgreSQL database. The View Engine used is EJS. Users can add messages and view them on the message board.
 
 ## Deployment Link
 https://express-message-board.up.railway.app/
 
 ## Prerequisites
 
-1. Docker
-2. Node
+1. Docker - https://www.docker.com/
+2. Node - https://nodejs.org/en
 
 ## Installation
 
@@ -20,7 +20,7 @@ https://express-message-board.up.railway.app/
 
 2. Install dependencies:
     ```sh
-    npm install
+    npm i
     ```
 
 3. Build the containers:
