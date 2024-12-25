@@ -20,7 +20,7 @@ WORKDIR /usr/src/app
 # Leverage a cache mount to /root/.npm to speed up subsequent builds.
 # Leverage a bind mounts to package.json and package-lock.json to avoid having to copy them into
 # into this layer.
-COPY package.json package-lock.json ./
+COPY package.json ./
 
 RUN --mount=type=cache,id=s/5b5d4ab6-9ef9-4a9c-9d05-459161e4bd48-root/.npm,target=/root/.npm \
     npm ci --omit=dev
