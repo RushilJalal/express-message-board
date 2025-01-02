@@ -14,7 +14,7 @@ https://express-message-board.up.railway.app/
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/RushilJalal/express-message-board.git
+    git clone -b docker https://github.com/RushilJalal/express-message-board.git
     cd express-message-board
     ```
 
